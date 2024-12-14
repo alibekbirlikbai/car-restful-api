@@ -1,19 +1,6 @@
-plugins {
-    id("java")
-}
-
-group = "org.example"
-version = "unspecified"
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-}
-
-tasks.test {
-    useJUnitPlatform()
+    runtimeOnly("org.flywaydb:flyway-core:11.1.0")
+    runtimeOnly("org.flywaydb:flyway-database-postgresql:11.1.0")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.4.0")
+    implementation("org.postgresql:postgresql:42.5.0")
 }

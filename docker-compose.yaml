@@ -4,7 +4,7 @@ services:
   car-crud-postgresql:
     image: postgres
     environment:
-      POSTGRES_DB: "car-crud-db"
+      POSTGRES_DB: "car_crud_db"
       POSTGRES_USER: "test"
       POSTGRES_PASSWORD: "test"
     ports:
