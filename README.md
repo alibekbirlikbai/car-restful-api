@@ -8,6 +8,65 @@
    
 3. **`auth-security`**: сервис для настройки безопасности
     
+
+## quickstart
+
+<details>
+  <summary><b><code>docker-compose</code></b></summary>
+
+1. Запуситите `docker-compose.yaml` 
+
+    ![img_1.png](img_1.png)
+
+2. Подключитесь к бд через `DataGrip` (`IntelliJ IDEA Ultimate`)
+
+    ![img.png](img.png)
+
+    </details>
+
+</details>
+
+
+<details>
+  <summary><b><code>миграция бд</code></b></summary>
+
+1. Запустите сервис `flyway-migration` (`FlywayMigration.class`)
+2. В `resources/db/migration` определены версии миграции бд
+
+    ![img_2.png](img_2.png)
+
+    Где определена таблица `Cars`:
+    ```postgresql
+    CREATE TABLE cars (
+         id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+         make VARCHAR(255) NOT NULL,
+         model VARCHAR(255) NOT NULL,
+         year INT NOT NULL,
+         price NUMERIC NOT NULL,
+         vin VARCHAR(17) NOT NULL UNIQUE
+    );
+    
+    -- нужно для gen_random_uuid()
+    CREATE EXTENSION IF NOT EXISTS pgcrypto;
+    ```
+      
+    И в которых определены `init` значения:
+    ```postgresql
+    INSERT INTO cars (make, model, year, price, vin)
+    VALUES
+            ('Toyota', 'Corolla', 1991, 20000.50, '1HGBH41JXMN109186'),
+            ('Hyundai', 'Elantra', 2024, 15000.00, '1FADP3F29JL235973'),
+            ('Honda', 'Civic', 2021, 22000.75, '19XFC1F56GE200815'),
+            ('BMW', 'X5', 2015, 35000.30, '5UXKR6C59K0W97452'),
+            ('Audi', 'A4', 2000, 27000.90, 'WAUZVAFB5CN071113');
+    ```
+
+</details>
+
+
+
+
+
 ## api
 
 <details>
@@ -99,6 +158,8 @@
       ```
       http://localhost:8080/car-crud/api/cars/ad118fab-767c-4762-a0f4-d2197123c9f9
       ```
+   
+      >  `ad118fab-767c-4762-a0f4-d2197123c9f9` id от  init записей при миграции в бд
 
    **_Response:_**
 
