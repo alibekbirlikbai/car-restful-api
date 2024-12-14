@@ -1,3 +1,11 @@
 version: '3.5'
 
 services:
+  car-crud-postgresql:
+    image: postgres
+    environment:
+      POSTGRES_DB: "car-crud-db"
+      POSTGRES_USER: "test"
+      POSTGRES_PASSWORD: "test"
+    ports:
+      - "5432:5432"
