@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/cars")
+@RequestMapping("/car-crud/api/cars")
 public class CarController {
     private final CarService carService;
 
