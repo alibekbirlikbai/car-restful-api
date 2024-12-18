@@ -1,3 +1,15 @@
+## demo
+
+> Миграция базы данных (Flyway):
+
+[demo.flyway-migration.webm](../../../Downloads/demo.flyway-migration.webm)
+
+> Функциональность API + JWT Авторизация:
+
+[demo.restful-api+jwt-auth.webm](../../../Downloads/demo.restful-api%2Bjwt-auth.webm)
+
+![img_3.png](img_3.png)
+
 ## docs
 
 Всего 3 сервиса
@@ -22,7 +34,6 @@
 
     ![img.png](img.png)
 
-    </details>
 
 </details>
 
@@ -264,39 +275,29 @@
 
 1. <details>
 
-    <summary>POST /log-up</summary>
+    <summary>POST /auth/sign-in</summary>
 
    **_Request:_**
 
       ```
-      http://localhost:8080/auth-security/api/log-up
+      http://localhost:8080/auth/sign-in
       ```
+
+    ```yaml
+    {
+       "name": "qwert",
+       "password": "qwert",
+       "email": "qwert",
+       "role": "ROLE_USER"
+    }
+    ```
 
    **_Response:_**
 
     ```yaml
-
+    eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJxd2VydCIsImlhdCI6MTczNDUyMjI1NCwiZXhwIjoxNzM0NTI0MDU0fQ.zEj-QNrg9UKBg6WhU8iM748HETT80mGLsZZx1BOTgjE
     ```
-
-    </details>
-
-
-
-2. <details>
-
-    <summary>POST /log-in</summary>
-
-   **_Request:_**
-
-      ```
-      http://localhost:8080/auth-security/api/log-in
-      ```
-
-   **_Response:_**
-
-    ```yaml
-    
-    ```
+   > Это не актуальный jwt (для теста нужно будет сгенерировать локально)
 
     </details>
 
