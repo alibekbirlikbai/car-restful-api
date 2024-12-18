@@ -47,7 +47,7 @@
     ![img_2.png](img_2.png)
 
     Где определена таблица `Cars`:
-    ```postgresql
+    ```sql
     CREATE TABLE cars (
          id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
          make VARCHAR(255) NOT NULL,
@@ -62,7 +62,7 @@
     ```
       
     И в которых определены `init` значения:
-    ```postgresql
+    ```sql
     INSERT INTO cars (make, model, year, price, vin)
     VALUES
             ('Toyota', 'Corolla', 1991, 20000.50, '1HGBH41JXMN109186'),
