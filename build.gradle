@@ -29,5 +29,6 @@ subprojects {
 
     dependencies {
         implementation("org.springframework.boot:spring-boot-starter:3.4.0")
+        compileOnly("org.projectlombok:lombok:1.18.30")
     }
 }
