@@ -2,13 +2,13 @@
 
 > Миграция базы данных (Flyway):
 
-[demo.flyway-migration.webm](../../../Downloads/demo.flyway-migration.webm)
+[demo.flyway-migration.webm](https://github.com/user-attachments/assets/c87fa06f-ae5c-4e78-a0bf-b78b8e41f947)
 
 > Функциональность API + JWT Авторизация:
 
-[demo.restful-api+jwt-auth.webm](../../../Downloads/demo.restful-api%2Bjwt-auth.webm)
+[demo.restful-api+jwt-auth.webm](https://github.com/user-attachments/assets/bf2948c1-67ae-44cd-aa20-484e49bded1b)
 
-![img_3.png](img_3.png)
+![image](https://github.com/user-attachments/assets/45d5c6e9-8188-4cb3-9ca2-43f3bf241f2d)
 
 ## docs
 
